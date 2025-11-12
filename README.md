@@ -1,5 +1,5 @@
 # Usage
-Return defined error instead of throwing/catching. Wanna npm package? Bro, it's a 22-lines file, just copy it.
+Return defined error instead of throwing/catching. Npm package? Bro, it's a 22-lines file, just copy it.
 
 ```ts
 import { Result, ok, err, defineError } from "./errors";
