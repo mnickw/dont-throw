@@ -1,5 +1,5 @@
 # Usage
-You can use it for returning defined error instead of throwing/catching. Wanna npm package? Bro, it's just a 22-lines file, just copy it.
+Return defined error instead of throwing/catching. Wanna npm package? Bro, it's a 22-lines file, just copy it.
 
 ```ts
 import { Result, ok, err, defineError } from "./errors";
@@ -10,7 +10,7 @@ export const NegativeIndexError = defineError(
 );
 export type GetItemsError = InstanceType<typeof NegativeIndexError> | ... other errors;
 
-function getItem(xs: unknown[], index: number): Result<unknown, GetItemsError> {
+function getItem(xs: number[], index: number): Result<number, GetItemsError> {
     if (index < 0) {
         return err(new NegativeIndexError({ index }));
     }
