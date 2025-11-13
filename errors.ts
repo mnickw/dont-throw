@@ -28,9 +28,9 @@ export const NegativeIndexError = defineError(
     "NegativeIndexError",
     ({ index }: { index: number }) => `Index must be non-negative, got ${index}`
 );
-export type GetItemsError = InstanceType<typeof NegativeIndexError> | Error;
+export type GetItemsError = InstanceType<typeof NegativeIndexError> | ... other errors;
 
-function getItem(xs: unknown[], index: number): Result<unknown, GetItemsError> {
+function getItem(xs: number[], index: number): Result<number, GetItemsError> {
     if (index < 0) {
         return err(new NegativeIndexError({ index }));
     }
